@@ -3,10 +3,10 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'NewsHub - Latest News & Updates',
-  description: 'Stay informed with the latest news from around the world. Politics, Tech, Business, Sports, and more.',
+  title: 'Newspaper Now - Latest News & Updates',
+  description: 'Stay informed with the latest news from around the world. Politics, Tech, Business, Sports, and more from Newspaper Now.',
   openGraph: {
-    title: 'NewsHub - Latest News & Updates',
+    title: 'Newspaper Now - Latest News & Updates',
     description: 'Stay informed with the latest news from around the world.',
     type: 'website',
   },
