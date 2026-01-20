@@ -111,23 +111,29 @@ backend:
     file: "lib/wordpress.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented WordPress REST API utilities with getPosts, getPostBySlug, getCategories, getCategoryBySlug functions. Using TechCrunch API as demo. API is responding successfully with articles."
+      - working: true
+        agent: "testing"
+        comment: "✅ COMPREHENSIVE TESTING COMPLETED: All WordPress API functions working correctly. Tested getPosts (pagination working), getPostBySlug (retrieves single articles), getCategories (25 categories fetched), getCategoryBySlug (category filtering working), and category-based post filtering. TechCrunch API responding with proper data structure including _embedded data, pagination headers (X-WP-TotalPages, X-WP-Total). Website successfully displays articles with titles, images, metadata. Cache warning about 16MB+ responses is expected behavior - data still loads correctly, ISR just won't cache large responses. All core functionality verified."
   
   - task: "API Health Check Endpoint"
     implemented: true
-    working: "NA"
+    working: true
     file: "app/api/[[...path]]/route.js"
     stuck_count: 0
     priority: "low"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Simple health check endpoint implemented at /api/ route. Returns status 'healthy' with timestamp."
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: Health check endpoint working perfectly. GET /api/ returns 200 status with proper JSON response containing message: 'NewsHub API is running', status: 'healthy', and timestamp. All required fields present and correctly formatted."
 
 frontend:
   - task: "Homepage with Latest Articles Grid"
