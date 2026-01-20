@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link';
-import { Newspaper, Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Header() {
@@ -19,9 +20,15 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors">
-            <Newspaper className="h-8 w-8" />
-            <span className="text-2xl font-bold">NewsHub</span>
+          <Link href="/" className="flex items-center space-x-2 text-foreground hover:opacity-80 transition-opacity">
+            <Image 
+              src="https://customer-assets.emergentagent.com/job_headless-herald/artifacts/zy3509wh_IMG_20260120_185345.png"
+              alt="Newspaper Now"
+              width={150}
+              height={50}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
