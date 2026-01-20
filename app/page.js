@@ -5,8 +5,8 @@ import { Suspense } from 'react';
 import LoadingSpinner from '@/components/LoadingSpinner';
 
 export const metadata = {
-  title: 'NewsHub - Latest News & Updates',
-  description: 'Stay informed with the latest news from around the world. Politics, Tech, Business, Sports, and more.',
+  title: 'Newspaper Now - Latest News & Updates',
+  description: 'Stay informed with the latest news from around the world. Politics, Tech, Business, Sports, and more from Newspaper Now.',
 };
 
 export const revalidate = 60; // ISR: Revalidate every 60 seconds
