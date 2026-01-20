@@ -37,7 +37,7 @@ async function CategoryPage({ params, searchParams }) {
   const page = parseInt(searchParams?.page || '1');
   const { posts, totalPages, totalPosts, currentPage } = await getPosts({ 
     page, 
-    perPage: 12,
+    perPage: 9,
     categories: category.id 
   });
 
